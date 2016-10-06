@@ -1,0 +1,150 @@
+#include <iostream>
+#include <string>
+#include <Windows.h>
+
+using namespace std;
+
+string TicTacToeBoard[3][3] = { { "1", "2", "3" }, { "4", "5", "6" }, { "7", "8", "9" } };
+void DisplayBoard();
+void UserTurn();
+
+
+
+
+int main()
+{
+	DisplayBoard();
+	UserTurn();
+
+
+	system("pause");
+
+}
+void DisplayBoard()
+{
+	cout << "	      " << TicTacToeBoard[0][0] << "  |     " << TicTacToeBoard[0][1] << "      |    " << TicTacToeBoard[0][2] << "     " << endl;
+	cout << "	      " << endl;
+	cout << "             ----------------------" << endl;
+	cout << "              " << TicTacToeBoard[0][3] << "  |     " << TicTacToeBoard[0][4] << "      |    " << TicTacToeBoard[0][5] << "   " << endl;
+	cout << "    	  " << endl;
+	cout << "             ----------------------" << endl;
+	cout << "              " << TicTacToeBoard[0][6] << "  |     " << TicTacToeBoard[0][7] << "      |    " << TicTacToeBoard[0][8] << "    " << endl;
+	cout << "                 |            |     " << endl;
+
+
+
+
+
+
+}
+void UserTurn()
+{
+	string Answer;
+	bool bSpaceNotFree = true;
+
+	cout << "It is your turn, please choose a spot!!!!";
+	getline(cin, Answer);
+
+
+
+
+	while (Answer != "1" && Answer != "2" && Answer != "3" && Answer != "4" && Answer != "5" && Answer != "6" && Answer != "7" && Answer != "8" && Answer != "9")
+
+	{
+		cout << " You gave me wrong input, try entering again!";
+		getline(cin, Answer);
+	}
+
+
+
+	while (bSpaceNotFree)
+	{
+		if (Answer == "1" && TicTacToeBoard[0][0] == "1")
+		{
+			bSpaceNotFree = false;
+		}
+
+		else if (Answer == "2" && TicTacToeBoard[0][1] == "2")
+		{
+			bSpaceNotFree = false;
+		}
+		else if (Answer == "3" && TicTacToeBoard[0][2] == "3")
+		{
+			bSpaceNotFree = false;
+		}
+
+		else if (Answer == "4" && TicTacToeBoard[1][0] == "4")
+		{
+			bSpaceNotFree = false;
+		}
+		else if (Answer == "5" && TicTacToeBoard[1][1] == "5")
+		{
+			bSpaceNotFree = false;
+		}
+
+		else if (Answer == "6" && TicTacToeBoard[1][2] == "6")
+		{
+			bSpaceNotFree = false;
+		}
+		else if (Answer == "7" && TicTacToeBoard[2][0] == "7")
+		{
+			bSpaceNotFree = false;
+		}
+
+		else if (Answer == "8" && TicTacToeBoard[2][1] == "8")
+		{
+			bSpaceNotFree = false;
+		}
+		else if (Answer == "9" && TicTacToeBoard[2][2] == "9")
+		{
+			bSpaceNotFree = false;
+		}
+		else
+		{
+			cout << "That spot is already taken!!!! Try again!";
+			getline(cin, Answer);
+		}
+
+
+
+	}
+
+	if (Answer == "1")
+	{
+		TicTacToeBoard[0][0] = "x";
+	}
+	if (Answer == "2")
+	{
+		TicTacToeBoard[0][1] = "x";
+	}
+	if (Answer == "3")
+	{
+		TicTacToeBoard[0][2] = "x";
+	}
+	if (Answer == "4")
+	{
+		TicTacToeBoard[1][0] = "x";
+	}
+	if (Answer == "5")
+	{
+		TicTacToeBoard[1][1] = "x";
+	}
+	if (Answer == "6")
+	{
+		TicTacToeBoard[2][2] = "x";
+	}
+	if (Answer == "7")
+	{
+		TicTacToeBoard[2][0] = "x";
+	}
+	if (Answer == "8")
+	{
+		TicTacToeBoard[2][1] = "x";
+	}
+	if (Answer == "9")
+	{
+		TicTacToeBoard[2][2] = "x";
+	}
+
+}
+else if answer;
